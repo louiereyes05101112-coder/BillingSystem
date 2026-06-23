@@ -1,6 +1,6 @@
 ﻿namespace BillingSystem
 {
-    partial class Form1
+    partial class AddCustomerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -143,6 +143,7 @@
             btnSave.TabIndex = 11;
             btnSave.Text = "Save";
             btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnClear
             // 
@@ -162,7 +163,7 @@
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // AddCustomerForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -183,9 +184,10 @@
             Controls.Add(lblTitle);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MinimizeBox = false;
-            Name = "Form1";
+            Name = "AddCustomerForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += AddCustomerForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

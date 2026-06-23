@@ -1,6 +1,6 @@
 ﻿namespace BillingSystem
 {
-    partial class LogInForm
+    partial class LoginForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,7 +30,7 @@
         {
             lbltitle = new Label();
             lblusername = new Label();
-            textBox1 = new TextBox();
+            txtUsername = new TextBox();
             lblPassword = new Label();
             txtPassword = new TextBox();
             btnLogin = new Button();
@@ -56,12 +56,12 @@
             lblusername.TabIndex = 1;
             lblusername.Text = "User Name";
             // 
-            // textBox1
+            // txtUsername
             // 
-            textBox1.Location = new Point(153, 77);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
+            txtUsername.Location = new Point(153, 77);
+            txtUsername.Name = "txtUsername";
+            txtUsername.Size = new Size(125, 27);
+            txtUsername.TabIndex = 2;
             // 
             // lblPassword
             // 
@@ -88,6 +88,7 @@
             btnLogin.TabIndex = 5;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // btnCancel
             // 
@@ -98,7 +99,7 @@
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = true;
             // 
-            // LogInForm
+            // LoginForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -107,14 +108,15 @@
             Controls.Add(btnLogin);
             Controls.Add(txtPassword);
             Controls.Add(lblPassword);
-            Controls.Add(textBox1);
+            Controls.Add(txtUsername);
             Controls.Add(lblusername);
             Controls.Add(lbltitle);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
-            Name = "LogInForm";
+            Name = "LoginForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "BillingSystem Version 1.0-Login";
+            Load += LoginForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -123,7 +125,7 @@
 
         private Label lbltitle;
         private Label lblusername;
-        private TextBox textBox1;
+        private TextBox txtUsername;
         private Label lblPassword;
         private TextBox txtPassword;
         private Button btnLogin;
